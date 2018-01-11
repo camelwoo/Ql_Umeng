@@ -1,18 +1,7 @@
 {
   "name": "Umeng",
-  "version": "0.1",
-  "cordova_name": "Umeng Analytics Plugin",
-  "description": "A cordova plugin, a cordova version for Umeng Analytics SDK",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/camelwoo/Ql_Umeng.git"
-  },
-  "keywords": [
-    "cordova",
-    "ionic",
-    "umeng"
-  ],
-  "engines": [],
+  "version": "3.0.0",
+  "description": "cordova plugin for umeng analytics",
   "cordova": {
     "id": "Umeng",
     "platforms": [
@@ -20,7 +9,19 @@
       "android"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camelwoo/Ql_Umeng.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
   "author": "umeng",
   "license": "MIT",
-  "homepage": "https://github.com/camelwoo/Ql_Umeng.git"
+  "bugs": {
+    "url": "https://github.com/camelwoo/Ql_Umeng/issues"
+  },
+  "homepage": "https://github.com/camelwoo/Ql_Umeng#readme"
 }
