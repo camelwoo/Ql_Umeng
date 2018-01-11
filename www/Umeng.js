@@ -9,8 +9,8 @@
      * @param appKey appKey
      * @param channelId 渠道号
      */
-	init:function(appKey,channelId) {
-        cordova.exec(null, null, "Umeng", "init", [appKey, channelId]);
+	init:function(appKey,channelId, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "init", [appKey, channelId]);
     },
     /**
      * 结构化事件
@@ -22,8 +22,8 @@
      * @param eventLabel
      *            String类型.事件标签，事件的一个属性说明
      */
-	onCCEvent:function(evenArray, evenValue, eventLabel) {
-		cordova.exec(null, null, "Umeng","onCCEvent", [ evenArray, evenValue, eventLabel ]);
+	onCCEvent:function(evenArray, evenValue, eventLabel, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onCCEvent", [ evenArray, evenValue, eventLabel ]);
 		
 	},
     /**
@@ -32,8 +32,8 @@
      * @param eventId
      *            String类型.事件ID，注意需要先在友盟网站注册此ID
      */
-	onEvent : function(eventId) {
-		cordova.exec(null, null, "Umeng","onEvent", [ eventId ]);
+	onEvent : function(eventId, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onEvent", [ eventId ]);
 		
 	},
     /**
@@ -44,8 +44,8 @@
      * @param eventLabel
      *            String类型.事件标签，事件的一个属性说明
      */
-	onEventWithLabel : function(eventId, eventLabel) {
-		cordova.exec(null, null, "Umeng","onEventWithLabel", [ eventId, eventLabel ]);
+	onEventWithLabel : function(eventId, eventLabel, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onEventWithLabel", [ eventId, eventLabel ]);
 		
 	},
     /**
@@ -56,8 +56,8 @@
      * @param eventData
      *            Dictionary类型.当前事件的属性集合，最多支持10个K-V值
      */
-	onEventWithParameters : function(eventId, eventData) {
-		cordova.exec(null, null, "Umeng","onEventWithParameters", [ eventId, eventData ]);
+	onEventWithParameters : function(eventId, eventData, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onEventWithParameters", [ eventId, eventData ]);
 		
 	},
     /**
@@ -71,8 +71,8 @@
      *            int 类型.事件持续时长，单位毫秒，您需要手动计算并传入时长，作为事件的时长参数
      *
      */
-	onEventWithCounter : function(eventId, eventData, eventNum) {
-		cordova.exec(null, null, "Umeng","onEventWithCounter", [ eventId, eventData, eventNum ]);
+	onEventWithCounter : function(eventId, eventData, eventNum, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onEventWithCounter", [ eventId, eventData, eventNum ]);
 		
 	},
     /**
@@ -81,8 +81,8 @@
      * @param pageName
      *            String类型.页面名称
      */
-	onPageBegin : function(pageName) {
-		cordova.exec(null, null, "Umeng","onPageBegin", [ pageName ]);
+	onPageBegin : function(pageName, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onPageBegin", [ pageName ]);
 		
 	},
     /**
@@ -91,15 +91,15 @@
      * @param pageName
      *            String类型.页面名称
      */
-	onPageEnd : function(pageName) {
-		cordova.exec(null, null, "Umeng","onPageEnd", [ pageName ]);
+	onPageEnd : function(pageName, successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Umeng","onPageEnd", [ pageName ]);
 
 	},
     /**
      * 获取IOS UUID
      */
-	getDeviceId:function(callBack) {
-        cordova.exec(callBack, null, "Umeng", "getDeviceId", []);
+	getDeviceId:function(successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "getDeviceId", []);
                
     },
     /**
@@ -107,8 +107,8 @@
      * @param enabled
      *           Bool类型
      */
-	setLogEnabled:function(enabled) {
-        cordova.exec(null, null, "Umeng", "setLogEnabled", [enabled]);
+	setLogEnabled:function(enabled, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "setLogEnabled", [enabled]);
     },
     /**
      * 统计帐号登录接口 *
@@ -116,8 +116,8 @@
      * @param UID
      *            用户账号ID,长度小于64字节
      */
-    profileSignInWithPUID:function(UID) {
-        cordova.exec(null, null, "Umeng", "profileSignInWithPUID", [UID]);
+    profileSignInWithPUID:function(UID, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "profileSignInWithPUID", [UID]);
     },
     /**
      * 统计帐号登录接口 *
@@ -128,15 +128,15 @@
      * @param UID
      *            用户账号ID,长度小于64字节
      */
-    profileSignInWithPUIDWithProvider:function(provider, UID) {
-        cordova.exec(null, null, "Umeng", "profileSignInWithPUIDWithProvider", [ provider, UID ]);
+    profileSignInWithPUIDWithProvider:function(provider, UID, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "profileSignInWithPUIDWithProvider", [ provider, UID ]);
 
     },
     /**
      * 帐号统计退出接口
      */
-    profileSignOff:function(){
-        cordova.exec(null, null, "Umeng", "profileSignOff", []);
+    profileSignOff:function(successCallback, errorCallback){
+        cordova.exec(successCallback, errorCallback, "Umeng", "profileSignOff", []);
 
     },
     /**
@@ -145,8 +145,8 @@
      * @param level
      *            int类型.等级
      */
-    setUserLevelId:function(level) {
-        cordova.exec(null, null, "Umeng", "setUserLevelId", [level]);
+    setUserLevelId:function(level, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "setUserLevelId", [level]);
 
     },
     /**
@@ -155,8 +155,8 @@
      * @param level
      *            String类型.
      */
-    startLevel:function(level) {
-        cordova.exec(null, null, "Umeng", "startLevel", [level]);
+    startLevel:function(level, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "startLevel", [level]);
 
     },
     /**
@@ -165,8 +165,8 @@
      * @param level
      *            String类型.
      */
-    finishLevel:function(level) {
-        cordova.exec(null, null, "Umeng", "finishLevel", [level]);
+    finishLevel:function(level, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "finishLevel", [level]);
         
     },
     /**
@@ -176,8 +176,8 @@
      *            String类型.
      */
 
-    failLevel:function(level) {
-        cordova.exec(null, null, "Umeng", "failLevel", [level]);
+    failLevel:function(level, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "failLevel", [level]);
 
     },
     /**
@@ -197,8 +197,8 @@
      *            String类型.订单ID
      */
 
-    exchange:function(currencyAmount,currencyType,virtualAmount,channel,orderId) {
-        cordova.exec(null, null, "Umeng", "exchange", [currencyAmount,currencyType,virtualAmount,channel,orderId]);
+    exchange:function(currencyAmount,currencyType,virtualAmount,channel,orderId, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "exchange", [currencyAmount,currencyType,virtualAmount,channel,orderId]);
 
     },
     /**
@@ -212,8 +212,8 @@
      *            int类型.本次消费的途径，网银，支付宝 等
      */
 
-    pay:function(money, coin, source) {
-        cordova.exec(null, null, "Umeng", "pay", [ money, coin, source ]);
+    pay:function(money, coin, source, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "pay", [ money, coin, source ]);
 
     },
     /**
@@ -230,8 +230,8 @@
      * @param source
      *            int类型.本次消费的途径，网银支付宝等
      */
-    payWithItem:function(money, item, number, price, source) {
-        cordova.exec(null, null, "Umeng", "payWithItem", [ money, item, number, price, source ]);
+    payWithItem:function(money, item, number, price, source, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "payWithItem", [ money, item, number, price, source ]);
 
     },
     /**
@@ -245,8 +245,8 @@
      *            double类型.本地购买花费的虚拟币数量
      */
 
-    buy : function(item, number, price) {
-        cordova.exec(null, null, "Umeng", "buy", [ item, number, price ]);
+    buy : function(item, number, price, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "buy", [ item, number, price ]);
 
     },
     /**
@@ -259,8 +259,8 @@
      * @param price
      *            double类型.等值虚拟币
      */
-    use : function(item, number, price) {
-        cordova.exec(null, null, "Umeng", "use", [ item, number, price ]);
+    use : function(item, number, price, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "use", [ item, number, price ]);
 
     },
     /**
@@ -272,8 +272,8 @@
      *            int类型.奖励金币的触发原因
      */
 
-    bonus : function(coin, source) {
-        cordova.exec(null, null, "Umeng", "bonus", [ coin, source ]);
+    bonus : function(coin, source, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "bonus", [ coin, source ]);
 
     },
     /**
@@ -289,8 +289,8 @@
      *            int类型.本次消费的途径，网银支付宝等
      */
 
-    bonusWithItem : function(item, number, price, source) {
-        cordova.exec(null, null, "Umeng", "bonusWithItem", [ item, number, price, source ]);
+    bonusWithItem : function(item, number, price, source, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng", "bonusWithItem", [ item, number, price, source ]);
 
     },
     /** Dplus增加事件
@@ -298,8 +298,8 @@
      *              String类型.事件名
      *
      */
-    track : function(eventName) {
-        cordova.exec(null, null, "Umeng","track", [ eventName ]);
+    track : function(eventName, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Umeng","track", [ eventName ]);
     },
                
      /** Dplus增加事件
@@ -309,8 +309,8 @@
       *              Dictionary类型.自定义属性
       *
       */
-     trackWithProperty : function(eventName, property) {
-         cordova.exec(null, null, "Umeng","trackWithProperty", [ eventName, property]);
+     trackWithProperty : function(eventName, property, successCallback, errorCallback) {
+         cordova.exec(successCallback, errorCallback, "Umeng","trackWithProperty", [ eventName, property]);
      },
                
      /** * 设置属性 键值对 会覆盖同名的key
@@ -319,8 +319,8 @@
       *              Dictionary类型.自定义属性
       *
       */
-      registerSuperProperty : function(property) {
-         cordova.exec(null, null, "Umeng","registerSuperProperty", [property]);
+      registerSuperProperty : function(property, successCallback, errorCallback) {
+         cordova.exec(successCallback, errorCallback, "Umeng","registerSuperProperty", [property]);
       },
                
      /** * 从dplus专用文件中删除指定key-value
@@ -328,8 +328,8 @@
       *              String类型.自定义属性
       *
       */
-      unregisterSuperProperty : function(propertyName) {
-          cordova.exec(null, null, "Umeng","unregisterSuperProperty", [propertyName]);
+      unregisterSuperProperty : function(propertyName, successCallback, errorCallback) {
+          cordova.exec(successCallback, errorCallback, "Umeng","unregisterSuperProperty", [propertyName]);
        },
                
        /** 返回dplus专用文件中key对应的value；如果不存在，则返回空
@@ -337,22 +337,22 @@
         *              String类型.自定义属性
         *
         */
-        getSuperProperty : function(callBack,propertyName) {
-               cordova.exec(callBack, null, "Umeng","getSuperProperty", [propertyName]);
+        getSuperProperty : function(propertyName, successCallback, errorCallback) {
+               cordova.exec(successCallback, errorCallback, "Umeng","getSuperProperty", [propertyName]);
         },
                
        /** 返回Dplus专用文件中的所有key-value；如果不存在，则返回空。
         *
         */
-        getSuperProperties : function(callBack) {
-               cordova.exec(callBack, null, "Umeng","getSuperProperties", []);
+        getSuperProperties : function(successCallback, errorCallback) {
+               cordova.exec(successCallback, errorCallback, "Umeng","getSuperProperties", []);
         },
                
         /** * 清空Dplus专用文件中的所有key-value。
          *
          */
-         clearSuperProperties : function() {
-               cordova.exec(null, null, "Umeng","clearSuperProperties", []);
+         clearSuperProperties : function(successCallback, errorCallback) {
+               cordova.exec(successCallback, errorCallback, "Umeng","clearSuperProperties", []);
          },
                
         /** * 设置关注事件是否首次触发,只关注eventList前五个合法eventID.只要已经保存五个,此接口无效
@@ -360,8 +360,8 @@
          *              Array类型.自定义属性
          *
          */
-         setFirstLaunchEvent : function(eventList) {
-               cordova.exec(null, null, "Umeng","setFirstLaunchEvent", [eventList]);
+         setFirstLaunchEvent : function(eventList, successCallback, errorCallback) {
+               cordova.exec(successCallback, errorCallback, "Umeng","setFirstLaunchEvent", [eventList]);
          },
 
        };
