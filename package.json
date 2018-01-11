@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-umeng-analytics",
+  "name": "Umeng",
   "version": "0.1",
   "cordova_name": "Umeng Analytics Plugin",
   "description": "A cordova plugin, a cordova version for Umeng Analytics SDK",
@@ -14,7 +14,7 @@
   ],
   "engines": [],
   "cordova": {
-    "id": "cordova-plugin-umeng-analytics",
+    "id": "Umeng",
     "platforms": [
       "ios",
       "android"
